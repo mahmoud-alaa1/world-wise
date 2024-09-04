@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
+import styles from "./PageNav.module.css";
 
 function PageNav() {
+  console.log(styles)
   return (
-    <na>
+    <nav className={styles.nav}>
       <ul>
         <li>
           <NavLink to={"/"}>Home Page</NavLink>
@@ -14,8 +16,8 @@ function PageNav() {
           <NavLink to={"/product"}>product</NavLink>
         </li>
       </ul>
-    </na>
+    </nav>
   );
 }
 
-export default PageNav
+export default PageNav;
