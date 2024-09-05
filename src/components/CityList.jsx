@@ -6,9 +6,9 @@ import CityItem from "./CityItem";
 function CityList({ cities, loading }) {
   if (loading) return <Spinner />;
   return (
-    <ul className={styles.CityList}>
+    <ul className={styles.cityList}>
       {cities.map((city, i) => (
-        <CityItem city={city} key={i} />
+        <CityItem city={city} key={city.id} />
       ))}
     </ul>
   );
