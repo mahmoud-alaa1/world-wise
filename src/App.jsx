@@ -7,6 +7,7 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
+import Form from "./components/Form";
 import City from "./components/City";
 
 import useFetch from "./hooks/useFetch";
@@ -14,9 +15,6 @@ const BASE_URL = "http://localhost:6874/cities";
 
 function App() {
   const { loading, error, data: cities } = useFetch(BASE_URL);
-  console.log(cities);
-  console.log(loading);
-  console.log(error);
 
   return (
     <BrowserRouter>
@@ -40,7 +38,7 @@ function App() {
             path="countries"
             element={<CountryList cities={cities} loading={loading} />}
           ></Route>
-          <Route path="form" element={<p>form</p>}></Route>
+          <Route path="form" element={<Form />}></Route>
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
