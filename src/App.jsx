@@ -6,8 +6,8 @@ import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
+import CountryList from "./components/CountryList";
 import useFetch from "./hooks/useFetch";
-
 const BASE_URL = "http://localhost:6874/cities";
 
 function App() {
@@ -32,7 +32,10 @@ function App() {
             path="cities"
             element={<CityList cities={cities} loading={loading} />}
           />
-          <Route path="countries" element={<p>List of counteries</p>}></Route>
+          <Route
+            path="countries"
+            element={<CountryList cities={cities} loading={loading} />}
+          ></Route>
           <Route path="form" element={<p>form</p>}></Route>
         </Route>
         <Route path="*" element={<PageNotFound />} />
