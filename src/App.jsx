@@ -7,6 +7,8 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
+import City from "./components/City";
+
 import useFetch from "./hooks/useFetch";
 const BASE_URL = "http://localhost:6874/cities";
 
@@ -28,10 +30,12 @@ function App() {
             index
             element={<CityList cities={cities} loading={loading} />}
           />
+
           <Route
             path="cities"
             element={<CityList cities={cities} loading={loading} />}
           />
+          <Route path="cities/:id" element={<City />} />
           <Route
             path="countries"
             element={<CountryList cities={cities} loading={loading} />}
