@@ -54,7 +54,7 @@ function Form() {
         <Button
           type={`back`}
           onClick={(e) => {
-            e.preventdefault();
+            e.preventDefault();
             navigate(-1);
           }}
         >
