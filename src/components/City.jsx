@@ -1,8 +1,10 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import styles from "./City.module.css";
 import { useCities } from "../contexts/CitiesContext";
 import { useEffect } from "react";
 import Spinner from "./Spinner";
+import Button from "./Button";
+import BackButton from "./BackButton";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -15,6 +17,7 @@ const formatDate = (date) =>
 function City() {
   const { id } = useParams();
   const { currentCity, getCity, loading, error } = useCities();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getCity(id);
@@ -29,7 +32,6 @@ function City() {
   }
 
   const { cityName, emoji, date, notes } = currentCity;
-
   return (
     <div className={styles.city}>
       <div className={styles.row}>
@@ -53,9 +55,16 @@ function City() {
 
       <div className={styles.row}>
         <h6>Learn more</h6>
-        <a href={`https://en.wikipedia.org/wiki/${cityName}`} target="_blank" rel="noreferrer">
+        <a
+          href={`https://en.wikipedia.org/wiki/${cityName}`}
+          target="_blank"
+          rel="noreferrer"
+        >
           Check out {cityName} on Wikipedia &rarr;
         </a>
+      </div>
+      <div>
+        <BackButton/>
       </div>
     </div>
   );
