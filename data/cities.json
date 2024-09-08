@@ -71,6 +71,54 @@
         "lat": "41.96814375880152",
         "lng": "-0.48689619218800667"
       }
+    },
+    {
+      "id": "78fa",
+      "cityName": "Bouglon",
+      "country": "France",
+      "date": "2024-09-08T06:09:24.535Z",
+      "notes": "",
+      "emoji": "🇫🇷",
+      "position": {
+        "lat": "44.402786424916926",
+        "lng": "0.10314119790132639"
+      }
+    },
+    {
+      "id": "9e01",
+      "cityName": "Senille-Saint-Sauveur",
+      "country": "France",
+      "date": "2024-09-08T06:09:24.535Z",
+      "notes": "",
+      "emoji": "🇫🇷",
+      "position": {
+        "lat": "46.785388226674876",
+        "lng": "0.6525234067770747"
+      }
+    },
+    {
+      "id": "6069",
+      "cityName": "Belrupt",
+      "country": "France",
+      "date": "2024-09-08T06:09:24.535Z",
+      "notes": "",
+      "emoji": "🇫🇷",
+      "position": {
+        "lat": "48.10792295961458",
+        "lng": "6.1011439571421695"
+      }
+    },
+    {
+      "id": "a892",
+      "cityName": "Willich",
+      "country": "Germany",
+      "date": "2024-09-08T06:09:24.535Z",
+      "notes": "",
+      "emoji": "🇩🇪",
+      "position": {
+        "lat": "51.26213242125325",
+        "lng": "6.4987468689628"
+      }
     }
   ]
 }

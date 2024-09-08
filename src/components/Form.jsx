@@ -26,7 +26,7 @@ function Form() {
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
   const [lat, lng] = useUrlPosition();
-  const { createCity } = useCities();
+  const { createCity, loading: createCityLoading } = useCities();
   const { data, error, loading, setLoading, setError } = useFetch(
     BASE_URL + `latitude=${lat}&longitude=${lng}`
   );
@@ -56,7 +56,10 @@ function Form() {
       <Message>Start adding your visited cities by clicking on the map</Message>
     );
   return (
-    <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className={`${styles.form} ${createCityLoading ? styles.loading : ""}`}
+      onSubmit={(e) => handleSubmit(e)}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
