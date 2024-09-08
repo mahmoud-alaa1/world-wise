@@ -98,7 +98,7 @@ function Form() {
 
       <div className={styles.buttons}>
         <Button type={`primary`}>Add</Button>
-        <BackButton />
+        <BackButton to="/app"/>
       </div>
     </form>
   );
