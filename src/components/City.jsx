@@ -27,8 +27,9 @@ function City() {
     return <Spinner />;
   }
 
-  if (error) {
-    return <div>There is an error while getting city data</div>;
+  if (error)
+  {
+    return <div>Error</div>
   }
 
   const { cityName, emoji, date, notes } = currentCity;
@@ -64,7 +65,7 @@ function City() {
         </a>
       </div>
       <div>
-        <BackButton/>
+        <BackButton />
       </div>
     </div>
   );
