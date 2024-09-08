@@ -47,6 +47,18 @@
         "lat": "38.30788692930492",
         "lng": "-6.731078724731667"
       }
+    },
+    {
+      "id": "66ec",
+      "cityName": "Markaz al Waḩat ad Dakhilah",
+      "country": "Egypt",
+      "date": "2024-09-08T05:57:19.410Z",
+      "notes": "om al donya",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "27.37909679587469",
+        "lng": "29.141177042379496"
+      }
     }
   ]
 }

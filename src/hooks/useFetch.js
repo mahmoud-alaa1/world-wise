@@ -20,5 +20,5 @@ export default function useFetch(url) {
     if (!url.includes("null")) getData();
   }, [url]);
 
-  return { data, error, loading, setLoading, setError };
+  return { data, setData, error, loading, setLoading, setError };
 }
