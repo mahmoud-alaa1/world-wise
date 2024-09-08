@@ -8,7 +8,7 @@ function CountryList() {
   if (loading) return <Spinner />;
 
   if (!cities.length)
-    return <Message message={"Add your first city by clicking on the map"} />;
+    return <Message>Add your first city by clicking on the map</Message>;
 
   const countries = cities.reduce((curr, current) => {
     const countryExists = curr.find((city) => city.country === current.country);

@@ -1,20 +1,24 @@
 import { useEffect, useState } from "react";
 
-export default function useFetch(url) {
+export default function useFetch(url, dispatch = null) {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     async function getData() {
       try {
-        setLoading(true);
+        if (dispatch) dispatch({ type: "loading" });
+        else setLoading(true);
         const response = await fetch(url);
         const res = await response.json();
-        setData(res);
+        if (dispatch) dispatch({ type: "load cities", payload: res });
+        else setData(res);
       } catch (err) {
-        setError(err);
+        if (dispatch) dispatch({ type: "rejected", payload: err });
+        else setError(err);
       } finally {
-        setLoading(false);
+        if (dispatch) dispatch({ type: "loaded" });
+        else setLoading(false);
       }
     }
     if (!url.includes("null")) getData();

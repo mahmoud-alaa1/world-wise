@@ -5,7 +5,6 @@ import Button from "./Button";
 import styles from "./Form.module.css";
 import BackButton from "./BackButton";
 import { useUrlPosition } from "../hooks/useUrlPosition";
-import { useGeolocation } from "../hooks/useGeolocation";
 import useFetch from "../hooks/useFetch";
 import Spinner from "./Spinner";
 import Message from "./Message";
@@ -98,7 +97,7 @@ function Form() {
 
       <div className={styles.buttons}>
         <Button type={`primary`}>Add</Button>
-        <BackButton to="/app"/>
+        <BackButton to="/app" />
       </div>
     </form>
   );
