@@ -11,6 +11,7 @@ function CitiesProvider({ children }) {
     loading,
     setLoading,
     setError,
+    setData: setCities,
   } = useFetch(BASE_URL);
   const [currentCity, setCurrentCity] = useState({});
 
@@ -35,7 +36,7 @@ function CitiesProvider({ children }) {
         headers: { "Content-Type": "application/json" },
       });
       const res = await response.json();
-      console.log(res);
+      setCities((cities) => [...cities, res]);
     } catch (err) {
       setError(err);
     } finally {
