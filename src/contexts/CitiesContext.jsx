@@ -5,7 +5,13 @@ const CitiesContext = createContext();
 const BASE_URL = "http://localhost:6874/cities";
 
 function CitiesProvider({ children }) {
-  const { data: cities, error, loading, setLoading, setError } = useFetch(BASE_URL);
+  const {
+    data: cities,
+    error,
+    loading,
+    setLoading,
+    setError,
+  } = useFetch(BASE_URL);
   const [currentCity, setCurrentCity] = useState({});
 
   async function getCity(id) {
@@ -20,7 +26,22 @@ function CitiesProvider({ children }) {
       setLoading(false);
     }
   }
-
+  async function createCity(newCity) {
+    try {
+      setLoading(true);
+      const response = await fetch(`${BASE_URL}`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: { "Content-Type": "application/json" },
+      });
+      const res = await response.json();
+      console.log(res);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setLoading(false);
+    }
+  }
   return (
     <CitiesContext.Provider
       value={{
@@ -29,6 +50,7 @@ function CitiesProvider({ children }) {
         error,
         currentCity,
         getCity,
+        createCity,
       }}
     >
       {children}
@@ -38,7 +60,8 @@ function CitiesProvider({ children }) {
 
 function useCities() {
   const context = useContext(CitiesContext);
-  if (context === undefined) throw new Error("useCities must be used within a CitiesProvider");
+  if (context === undefined)
+    throw new Error("useCities must be used within a CitiesProvider");
   return context;
 }
 
