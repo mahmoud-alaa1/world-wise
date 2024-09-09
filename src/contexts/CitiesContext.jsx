@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useCallback, useContext, useReducer } from "react";
 import useFetch from "../hooks/useFetch";
 
 const CitiesContext = createContext();
@@ -49,18 +49,21 @@ function CitiesProvider({ children }) {
 
   useFetch(BASE_URL, dispatch);
 
-  async function getCity(id) {
-    try {
-      dispatch({ type: "loading" });
-      const response = await fetch(`${BASE_URL}/${id}`);
-      const res = await response.json();
-      dispatch({ type: "city/loaded", payload: res });
-    } catch (err) {
-      dispatch({ type: "rejected", payload: err });
-    } finally {
-      dispatch({ type: "loaded" });
-    }
-  }
+  const getCity = useCallback(
+    async function getCity(id) {
+      try {
+        dispatch({ type: "loading" });
+        const response = await fetch(`${BASE_URL}/${id}`);
+        const res = await response.json();
+        dispatch({ type: "city/loaded", payload: res });
+      } catch (err) {
+        dispatch({ type: "rejected", payload: err });
+      } finally {
+        dispatch({ type: "loaded" });
+      }
+    },
+    [currentCity.id]
+  );
   async function createCity(newCity) {
     try {
       dispatch({ type: "loading" });
