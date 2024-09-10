@@ -61,6 +61,7 @@ npm run server
 - City & Country Management: Use the CityList and CountryList components to manage your travel data.
 
 ## 📂 Project Structure
+
 ├── src
 │   ├── components
 │   │   ├── ...
@@ -89,7 +90,7 @@ npm run server
 
 
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to contribute to this project by creating issues, submitting pull requests or emiling me `mahmoud.alaa.dev1@gmail.com`.
 
 
