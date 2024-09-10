@@ -25,36 +25,40 @@ export default function Login() {
   }, [isAuthenicated, navigate]);
 
   return (
-    <main className={styles.login}>
+    <div className={styles.container}>
       <PageNav />
-      <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
-        <div className={styles.row}>
-          <label htmlFor="email">Email address</label>
-          <input
-            type="email"
-            id="email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
-        </div>
 
-        <div className={styles.row}>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            required
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-          />
-        </div>
+      <main className={styles.login}>
+        <div className={styles.formContainer}>
+          <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+            <div className={styles.row}>
+              <label htmlFor="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+            </div>
 
-        <div>
-          <Button type={"primary"}>Login</Button>
+            <div className={styles.row}>
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+            </div>
+            <div>
+              <Button type={"primary"}>Login</Button>
+            </div>
+            {error && <Message>{error}</Message>}
+          </form>
         </div>
-      </form>
-      {error && <Message>{error}</Message>}
-    </main>
+      </main>
+    </div>
   );
 }
