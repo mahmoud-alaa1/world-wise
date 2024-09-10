@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav a:link,
@@ -48,6 +50,5 @@ a.ctaLink:visited {
     display: flex;
     align-items: center;
     gap: 4rem;
-    flex-direction: column;
   }
 }

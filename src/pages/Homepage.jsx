@@ -11,7 +11,7 @@ export default function Homepage() {
       <main className={styles.homepage}>
         <section>
           <h1>World Wise</h1>
-          <h2>You travel the world.</h2>
+          <h2>Travel the world.</h2>
           <h3>
             A world map that tracks your footsteps into every city you can think
             of. Never forget your wonderful experiences, and show your friends
