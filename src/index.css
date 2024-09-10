@@ -55,8 +55,7 @@ input:focus {
   background-color: #fff;
 }
 
-.cta:link,
-.cta:visited {
+.cta{
   display: inline-block;
   background-color: var(--color-brand--2);
   color: var(--color-dark--1);
@@ -66,8 +65,12 @@ input:focus {
   font-weight: 600;
   padding: 1rem 3rem;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
-
+.cta:hover{
+  background-color: #23ab6b;
+  color: #ececec;
+}
 /*
 "importCSSModule": {
     "prefix": "csm",
