@@ -62,27 +62,7 @@ npm run server
 
 ## 📂 Project Structure
 
-├── src
-│   ├── components
-│   │   ├── ...
-│   │   └── ...
-│   ├── contexts
-│   │   ├── CitiesContext.jsx
-│   │   └── FakeAuthContext.jsx
-│   ├── hooks
-│   │   ├── useFetch.js
-│   │   ├── useGeolocation.js
-│   │   └── useUrlPosition.jsx
-│   ├── pages
-│   │   ├── AppLayout.jsx
-│   │   ├── Homepage.jsx
-│   │   ├── Login.jsx
-│   │   ├── Pricing.jsx
-│   │   ├── Product.jsx
-│   │   └── PageNotFound.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
+![image](https://github.com/user-attachments/assets/aec77bf6-76ab-4526-ba54-f56d8ab17e28)
 
 
 
