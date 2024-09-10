@@ -42,18 +42,15 @@
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 818px) {
   .homepage h1 {
     font-size: 8rem;
   }
   .homepage h2 {
     font-size: 4rem;
-    line-height: 1.5;
   }
 
   .homepage h3 {
     font-size: 2rem;
-    color: var(--color-light--1);
-    margin-bottom: 2.5rem;
   }
 }
