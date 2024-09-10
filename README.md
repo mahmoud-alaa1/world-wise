@@ -65,17 +65,14 @@ npm run server
 ├── src
 │   ├── components
 │   │   ├── ...
-│   │   ├── ...
-│   
+│   │   └── ...
 │   ├── contexts
 │   │   ├── CitiesContext.jsx
 │   │   └── FakeAuthContext.jsx
-│   
 │   ├── hooks
 │   │   ├── useFetch.js
 │   │   ├── useGeolocation.js
 │   │   └── useUrlPosition.jsx
-│   
 │   ├── pages
 │   │   ├── AppLayout.jsx
 │   │   ├── Homepage.jsx
@@ -83,11 +80,10 @@ npm run server
 │   │   ├── Pricing.jsx
 │   │   ├── Product.jsx
 │   │   └── PageNotFound.jsx
-│   
 │   ├── App.jsx
 │   ├── main.jsx
-│   ├── index.css
-└── ...
+│   └── index.css
+
 
 
 
