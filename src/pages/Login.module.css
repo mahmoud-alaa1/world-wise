@@ -17,7 +17,6 @@
 .login .formContainer {
   display: flex;
   justify-content: center;
-  /* From https://css.glass */
 }
 
 .form {

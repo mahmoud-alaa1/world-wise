@@ -1,7 +1,17 @@
 .app {
   height: 100vh;
-  padding: 2.4rem;
   overscroll-behavior-y: none;
   display: flex;
   position: relative;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--color-dark--2);
+  display: flex;
+  justify-content: center;
+}
+
+.fullScreen {
+  font-size: 3rem;
 }

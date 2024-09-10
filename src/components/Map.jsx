@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
 import {
   MapContainer,
@@ -38,6 +38,9 @@ function Map() {
           {isLoadingPosition ? "Loading..." : "Use your position"}
         </Button>
       )}
+      <button className={styles.fullScreen}>
+        <i className="icon-fullscreen"></i>
+      </button>
       <MapContainer
         className={styles.map}
         center={mapPosition}
