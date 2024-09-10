@@ -77,7 +77,9 @@ npm run server
 
 
 ## 🤝 Contributing
-Feel free to contribute to this project by creating issues, submitting pull requests or emiling me `mahmoud.alaa.dev1@gmail.com`.
+Feel free to contribute to this project by creating issues, submitting pull requests or emiling me [Mahmoud Alaa](mailto:mahmoud.alaa.dev1@gmail.com?subject=[GitHub]%20World%20Wise)
+
+.
 
 
 
