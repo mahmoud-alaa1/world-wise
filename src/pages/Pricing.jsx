@@ -3,11 +3,13 @@ import styles from "./Product.module.css";
 import PageNav from "../components/PageNav";
 export default function Product() {
   return (
-    <main className={styles.product}>
-      <PageNav />
+    <div className={styles.container}>
+      <header>
+        <PageNav />
+      </header>
 
-      <section>
-        <div>
+      <main className={styles.product}>
+        <section>
           <h2>
             Simple pricing.
             <br />
@@ -18,9 +20,8 @@ export default function Product() {
             labore mollitia iusto. Recusandae quos provident, laboriosam fugit
             voluptatem iste.
           </p>
-        </div>
-        <img src="img-2.jpg" alt="overview of a large city with skyscrapers" />
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   );
 }

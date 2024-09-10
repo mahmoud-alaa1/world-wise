@@ -10,7 +10,7 @@ function PageNav() {
           <NavLink to={"/pricing"}>Pricing</NavLink>
         </li>
         <li>
-          <NavLink to={"/product"}>product</NavLink>
+          <NavLink to={"/product"}>About Us</NavLink>
         </li>
         <li>
           <NavLink to={"/login"} className={styles.ctaLink}>

@@ -3,15 +3,12 @@ import PageNav from "../components/PageNav";
 
 export default function Product() {
   return (
-    <main className={styles.product}>
+    <div className={styles.container}>
       <PageNav />
-      <section>
-        <img
-          src="img-1.jpg"
-          alt="person with dog overlooking mountain with sunset"
-        />
-        <div>
-          <h2>About WorldWide.</h2>
+
+      <main className={styles.product}>
+        <section>
+          <h2>About WorldWise.</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
             dicta illum vero culpa cum quaerat architecto sapiente eius non
@@ -23,8 +20,8 @@ export default function Product() {
             doloribus libero sunt expedita ratione iusto, magni, id sapiente
             sequi officiis et.
           </p>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   );
 }
