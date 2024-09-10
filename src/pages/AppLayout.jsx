@@ -8,9 +8,9 @@ function AppLayout() {
     <div className={styles.app}>
       <header className={styles.header}>
         <Logo />
+        <User />
       </header>
       <Map />
-      <User />
     </div>
   );
 }

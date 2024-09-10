@@ -9,7 +9,10 @@
 .header {
   background-color: var(--color-dark--2);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
 }
 
 .fullScreen {

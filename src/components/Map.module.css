@@ -36,3 +36,21 @@
 :global(.leaflet-popup-content-wrapper) {
   border-left: 5px solid var(--color-brand--2);
 }
+.fullscreen {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: var(--color-brand--2);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 999999999999;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.fullscreen:hover {
+  background-color: var(--color-hover-link);
+}

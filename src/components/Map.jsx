@@ -9,14 +9,50 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import { useGeolocation } from "../hooks/useGeolocation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
 import Button from "./Button";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 
 function Map() {
   const [mapPosition, setMapPosition] = useState([40, 0]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const containerRef = useRef(null);
+
   const { cities } = useCities();
+
+  const handleFullscreen = () => {
+    if (!isFullscreen) {
+      if (containerRef.current.requestFullscreen) {
+        containerRef.current.requestFullscreen();
+      } else if (containerRef.current.mozRequestFullScreen) {
+        // Firefox
+        containerRef.current.mozRequestFullScreen();
+      } else if (containerRef.current.webkitRequestFullscreen) {
+        // Chrome, Safari and Opera
+        containerRef.current.webkitRequestFullscreen();
+      } else if (containerRef.current.msRequestFullscreen) {
+        // IE/Edge
+        containerRef.current.msRequestFullscreen();
+      }
+      setIsFullscreen(true);
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        // Firefox
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        // Chrome, Safari and Opera
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        // IE/Edge
+        document.msExitFullscreen();
+      }
+      setIsFullscreen(false);
+    }
+  };
+
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
@@ -27,19 +63,22 @@ function Map() {
   useEffect(() => {
     if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
+
   useEffect(() => {
     if (geolocationPosition)
       setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
   }, [geolocationPosition]);
+
   return (
-    <div className={styles.mapContainer}>
+    <div className={styles.mapContainer} ref={containerRef}>
       {!geolocationPosition && (
         <Button type={`position`} onClick={getPosition}>
           {isLoadingPosition ? "Loading..." : "Use your position"}
         </Button>
       )}
-      <button className={styles.fullScreen}>
-        <i className="icon-fullscreen"></i>
+
+      <button onClick={handleFullscreen} className={styles.fullscreen}>
+        <i className={`icon-${!isFullscreen ? "fullscreen" : "minimize"}`}></i>
       </button>
       <MapContainer
         className={styles.map}
