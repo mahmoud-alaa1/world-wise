@@ -11,8 +11,13 @@ WorldWise is a travel application that allows users to track their travel experi
 
 ## 🖥️ Demo
 You can check **live website** [World Wise](world-wise1.vercel.app).
+![image](https://github.com/user-attachments/assets/a3b84fc2-e03f-474e-8347-b84d939ff474)
+![image](https://github.com/user-attachments/assets/9a580753-0484-4296-b3f8-d678d0e30b47)
+![image](https://github.com/user-attachments/assets/6000d924-c58d-4500-ba41-216f2f5400e7)
 
-🚀 Technologies Used
+
+
+## 🚀 Technologies Used
 - React: Front-end `library`
 - React Router DOM: For routing between pages
 - Context API: For managing city and authentication state
@@ -20,12 +25,12 @@ You can check **live website** [World Wise](world-wise1.vercel.app).
 - CSS Modules: For component-scoped styling
 - Vercel: For deployment
 
-🔐 Authentication
+## 🔐 Authentication
 This project uses a fake authentication context for managing user login. To access the main application, login with the following default credentials:
 - Email: mahmoud@example.com
 - Password: qwerty
 
-📦 Installation
+## 📦 Installation
 1. Clone the repository:
 ```
 git clone https://github.com/your-username/worldwise.git
@@ -40,7 +45,7 @@ cd worldwise
 npm install
 ```
 
-🔄 Usage
+## 🔄 Usage
 1. Run the application locally:
 ```
 npm run dev
@@ -53,7 +58,7 @@ npm run server
 
 
 
-📖 How It Works
+## 📖 How It Works
 - Homepage: Provides a welcoming interface with a call to action to start tracking your travels.
 - Login: Users can log in securely to access the app.
 - Protected Routes: Only authenticated users can access features like adding or viewing cities and countries.
