@@ -23,7 +23,7 @@ You can check **live website** [World Wise](world-wise1.vercel.app).
 - React: Front-end `library`
 - React Router DOM: For routing between pages
 - Context API: For managing city and authentication state
-- Custom Hooks: 
+- Custom Hooks: Implemented hooks to handle data fetching, geolocation, and URL position tracking.
 - CSS Modules: For component-scoped styling
 - Vercel: For deployment
 
