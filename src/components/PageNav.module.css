@@ -20,10 +20,15 @@
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 600;
+  transition: 0.2s ease-in-out;
 }
 
 /* CSS Modules feature */
 .nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+.nav ul li a:hover {
   color: var(--color-brand--2);
 }
 
@@ -33,6 +38,10 @@ a.ctaLink:visited {
   color: var(--color-dark--0);
   padding: 0.8rem 2rem;
   border-radius: 7px;
+}
+.nav ul li a.ctaLink:hover {
+  color: #fff;
+  background-color: var(--color-hover-link);
 }
 
 @media (max-width: 560px) {
