@@ -11,6 +11,8 @@ WorldWise is a travel application that allows users to track their travel experi
 
 ## 🖥️ Demo
 You can check **live website** [World Wise](world-wise1.vercel.app).
+
+
 ![image](https://github.com/user-attachments/assets/a3b84fc2-e03f-474e-8347-b84d939ff474)
 ![image](https://github.com/user-attachments/assets/9a580753-0484-4296-b3f8-d678d0e30b47)
 ![image](https://github.com/user-attachments/assets/6000d924-c58d-4500-ba41-216f2f5400e7)
