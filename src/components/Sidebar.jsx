@@ -1,12 +1,13 @@
 import styles from "./Sidebar.module.css";
 import AppNav from "./AppNav";
-import Logo from "./Logo";
 import { Outlet } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({ display, setDisplay }) {
   return (
-    <div className={styles.sidebar}>
-      <Logo />
+    <div style={!display ? { display: "none" } : {}} className={styles.sidebar}>
+      <button onClick={() => setDisplay(!display)} className={styles.close}>
+        X
+      </button>
       <AppNav />
       <Outlet />
       <footer className={styles.footer}>

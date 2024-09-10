@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,259 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "id": "de6b",
+      "cityName": "Suez",
+      "country": "Egypt",
+      "date": "2024-09-10T15:33:51.568Z",
+      "notes": "",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "29.113775395114416",
+        "lng": "32.01416015625001"
+      }
+    },
+    {
+      "id": "d2e4",
+      "cityName": "Dawmat al Jandal",
+      "country": "Saudi Arabia",
+      "date": "2024-09-10T15:33:59.757Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "29.649868677972304",
+        "lng": "39.8583984375"
+      }
+    },
+    {
+      "id": "69dc",
+      "cityName": "Al Kharjah",
+      "country": "Egypt",
+      "date": "2024-09-10T15:34:01.007Z",
+      "notes": "",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "25.383735254706867",
+        "lng": "31.267089843750004"
+      }
+    },
+    {
+      "id": "15dd",
+      "cityName": "Medina",
+      "country": "Saudi Arabia",
+      "date": "2024-09-10T15:34:02.509Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "24.367113562651276",
+        "lng": "39.22119140625"
+      }
+    },
+    {
+      "id": "56a5",
+      "cityName": "Markaz al Waḩat ad Dakhilah",
+      "country": "Egypt",
+      "date": "2024-09-10T15:34:03.607Z",
+      "notes": "",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "24.726874870506972",
+        "lng": "28.894042968750004"
+      }
+    },
+    {
+      "id": "f8ac",
+      "cityName": "Umluj",
+      "country": "Saudi Arabia",
+      "date": "2024-09-10T15:34:06.211Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "25.58208527870072",
+        "lng": "37.08984375000001"
+      }
+    },
+    {
+      "id": "7634",
+      "cityName": "Markaz al Waḩat ad Dakhilah",
+      "country": "Egypt",
+      "date": "2024-09-10T15:34:08.935Z",
+      "notes": "",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "25.522614647623293",
+        "lng": "27.597656250000004"
+      }
+    },
+    {
+      "id": "ec5f",
+      "cityName": "Dalqu",
+      "country": "Sudan (the)",
+      "date": "2024-09-10T15:34:10.461Z",
+      "notes": "",
+      "emoji": "🇸🇩",
+      "position": {
+        "lat": "19.787380181986222",
+        "lng": "29.047851562500004"
+      }
+    },
+    {
+      "id": "2768",
+      "cityName": "Al Kharjah",
+      "country": "Egypt",
+      "date": "2024-09-10T15:34:12.078Z",
+      "notes": "",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "23.926013033021192",
+        "lng": "30.893554687500004"
+      }
+    },
+    {
+      "id": "1719",
+      "cityName": "Tathlith",
+      "country": "Saudi Arabia",
+      "date": "2024-09-10T15:34:17.200Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "19.91138351415555",
+        "lng": "43.52783203125001"
+      }
+    },
+    {
+      "id": "7174",
+      "cityName": "Al Buhaira",
+      "country": "Sudan (the)",
+      "date": "2024-09-10T15:34:23.329Z",
+      "notes": "",
+      "emoji": "🇸🇩",
+      "position": {
+        "lat": "18.47960905583198",
+        "lng": "32.78320312500001"
+      }
+    },
+    {
+      "id": "320f",
+      "cityName": "Al Jawf",
+      "country": "Libya",
+      "date": "2024-09-10T15:34:24.543Z",
+      "notes": "",
+      "emoji": "🇱🇾",
+      "position": {
+        "lat": "24.04646399966658",
+        "lng": "22.21435546875"
+      }
+    },
+    {
+      "id": "efdb",
+      "cityName": "Mellit",
+      "country": "Sudan (the)",
+      "date": "2024-09-10T15:34:25.717Z",
+      "notes": "",
+      "emoji": "🇸🇩",
+      "position": {
+        "lat": "18.458768120015137",
+        "lng": "24.455566406250004"
+      }
+    },
+    {
+      "id": "6edc",
+      "cityName": "Bilma",
+      "country": "Niger (the)",
+      "date": "2024-09-10T15:34:26.787Z",
+      "notes": "",
+      "emoji": "🇳🇪",
+      "position": {
+        "lat": "22.553147478403194",
+        "lng": "14.370117187500002"
+      }
+    },
+    {
+      "id": "f65a",
+      "cityName": "Ajdabiya",
+      "country": "Libya",
+      "date": "2024-09-10T15:34:28.054Z",
+      "notes": "",
+      "emoji": "🇱🇾",
+      "position": {
+        "lat": "27.293689224852407",
+        "lng": "21.181640625000004"
+      }
+    },
+    {
+      "id": "c6d7",
+      "cityName": "El Dabaa",
+      "country": "Egypt",
+      "date": "2024-09-10T15:34:29.240Z",
+      "notes": "",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "30.315987718557867",
+        "lng": "28.32275390625"
+      }
+    },
+    {
+      "id": "3fd7",
+      "cityName": "Tayma’",
+      "country": "Saudi Arabia",
+      "date": "2024-09-10T15:34:32.290Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "27.994401411046148",
+        "lng": "38.36425781250001"
+      }
+    },
+    {
+      "id": "3af2",
+      "cityName": "Al Aflaj",
+      "country": "Saudi Arabia",
+      "date": "2024-09-10T15:34:36.199Z",
+      "notes": "",
+      "emoji": "🇸🇦",
+      "position": {
+        "lat": "21.6778482933475",
+        "lng": "46.93359375000001"
+      }
+    },
+    {
+      "id": "2332",
+      "cityName": "Baharak",
+      "country": "Afghanistan",
+      "date": "2024-09-10T15:34:52.601Z",
+      "notes": "",
+      "emoji": "🇦🇫",
+      "position": {
+        "lat": "36.95169797083481",
+        "lng": "70.87991997928307"
+      }
+    },
+    {
+      "id": "2d5b",
+      "cityName": "Beruniy",
+      "country": "Uzbekistan",
+      "date": "2024-09-10T15:34:54.046Z",
+      "notes": "",
+      "emoji": "🇺🇿",
+      "position": {
+        "lat": "42.94033923363183",
+        "lng": "60.95214843750001"
+      }
+    },
+    {
+      "id": "adde",
+      "cityName": "Ras Gharib",
+      "country": "Egypt",
+      "date": "2024-09-10T15:37:36.482Z",
+      "notes": "I love ras gharib",
+      "emoji": "🇪🇬",
+      "position": {
+        "lat": "28.246552728445266",
+        "lng": "32.9366609021378"
+      }
     }
   ]
 }

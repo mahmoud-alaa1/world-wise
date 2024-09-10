@@ -9,49 +9,15 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import { useGeolocation } from "../hooks/useGeolocation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
 import Button from "./Button";
 import { useUrlPosition } from "../hooks/useUrlPosition";
-
-function Map() {
+import Sidebar from "./Sidebar";
+function Map({ isFullscreen, setIsFullscreen }) {
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const containerRef = useRef(null);
-
   const { cities } = useCities();
-
-  const handleFullscreen = () => {
-    if (!isFullscreen) {
-      if (containerRef.current.requestFullscreen) {
-        containerRef.current.requestFullscreen();
-      } else if (containerRef.current.mozRequestFullScreen) {
-        // Firefox
-        containerRef.current.mozRequestFullScreen();
-      } else if (containerRef.current.webkitRequestFullscreen) {
-        // Chrome, Safari and Opera
-        containerRef.current.webkitRequestFullscreen();
-      } else if (containerRef.current.msRequestFullscreen) {
-        // IE/Edge
-        containerRef.current.msRequestFullscreen();
-      }
-      setIsFullscreen(true);
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        // Firefox
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        // Chrome, Safari and Opera
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        // IE/Edge
-        document.msExitFullscreen();
-      }
-      setIsFullscreen(false);
-    }
-  };
+  const [display, setDisplay] = useState(false);
 
   const {
     isLoading: isLoadingPosition,
@@ -60,6 +26,9 @@ function Map() {
   } = useGeolocation();
 
   const [mapLat, mapLng] = useUrlPosition();
+  const handleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
   useEffect(() => {
     if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
@@ -70,16 +39,19 @@ function Map() {
   }, [geolocationPosition]);
 
   return (
-    <div className={styles.mapContainer} ref={containerRef}>
-      {!geolocationPosition && (
+    <div className={styles.mapContainer}>
+      <button onClick={handleFullscreen} className={styles.fullscreen}>
+        <i className={`icon-${!isFullscreen ? "fullscreen" : "minimize"}`}></i>
+      </button>
+      {(!geolocationPosition ||
+        (geolocationPosition.lat !== mapPosition[0] &&
+          geolocationPosition.lng !== mapPosition[1])) && (
         <Button type={`position`} onClick={getPosition}>
           {isLoadingPosition ? "Loading..." : "Use your position"}
         </Button>
       )}
+      <Sidebar display={display} setDisplay={setDisplay} />
 
-      <button onClick={handleFullscreen} className={styles.fullscreen}>
-        <i className={`icon-${!isFullscreen ? "fullscreen" : "minimize"}`}></i>
-      </button>
       <MapContainer
         className={styles.map}
         center={mapPosition}
@@ -99,7 +71,7 @@ function Map() {
           </Marker>
         ))}
         <ChangeCenter position={mapPosition} />
-        <DetectClick />
+        <DetectClick setDisplay={setDisplay} />
       </MapContainer>
     </div>
   );
@@ -111,11 +83,14 @@ function ChangeCenter({ position }) {
   return null;
 }
 
-function DetectClick() {
+function DetectClick({ setDisplay }) {
   const navigate = useNavigate();
 
   useMapEvents({
-    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+    click: (e) => {
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+      setDisplay(true);
+    },
   });
 }
 
