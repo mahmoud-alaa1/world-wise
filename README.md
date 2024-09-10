@@ -65,27 +65,30 @@ npm run server
 ├── src
 │   ├── components
 │   │   ├── ...
-│   │   ├── ....
-|   |
+│   │   ├── ...
+│   
 │   ├── contexts
-│   │   ├── CitiesContext.js
-│   │   └── FakeAuthContext.js
-|   |
+│   │   ├── CitiesContext.jsx
+│   │   └── FakeAuthContext.jsx
+│   
 │   ├── hooks
 │   │   ├── useFetch.js
-│   │   └── useGeolocation.js
+│   │   ├── useGeolocation.js
 │   │   └── useUrlPosition.jsx
+│   
 │   ├── pages
-│   │   ├── AppLayout.js
-│   │   ├── Homepage.js
-│   │   ├── Login.js
-│   │   ├── Pricing.js
-│   │   ├── Product.js
-│   │   └── PageNotFound.js
-│   └── App.jsx
-│   └── main.jsx
-│   └── index.css
+│   │   ├── AppLayout.jsx
+│   │   ├── Homepage.jsx
+│   │   ├── Login.jsx
+│   │   ├── Pricing.jsx
+│   │   ├── Product.jsx
+│   │   └── PageNotFound.jsx
+│   
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
 └── ...
+
 
 
 
