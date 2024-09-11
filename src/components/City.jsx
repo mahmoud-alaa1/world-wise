@@ -1,9 +1,8 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import styles from "./City.module.css";
 import { useCities } from "../contexts/CitiesContext";
-import { useCallback, useEffect } from "react";
+import {  useEffect } from "react";
 import Spinner from "./Spinner";
-import Button from "./Button";
 import BackButton from "./BackButton";
 
 const formatDate = (date) =>
