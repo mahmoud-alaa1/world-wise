@@ -7,7 +7,6 @@ WorldWise is a travel application that allows users to track their travel experi
 - User Authentication: Secure login to protect your travel history.
 - Protected Routes: Access the app's dashboard only after logging in.
 - City & Country Listings: Detailed city and country lists to record your travels.
-- Simple Pricing: Affordable pricing plan for premium features.
 
 ## 🖥️ Demo
 You can check **live website** [World Wise](https://world-wise1.vercel.app/).
